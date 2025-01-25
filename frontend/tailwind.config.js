@@ -7,3 +7,7 @@ module.exports = {
   },
   plugins: [], // Ako koristiš Tailwind dodatke, dodaj ih ovdje
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
