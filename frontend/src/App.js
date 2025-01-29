@@ -1,10 +1,23 @@
+import React from "react";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Links from "./pages/Links";
+
 function App() {
   return (
-    <div className='bg-blue-500 text-white text-center py-10'>
-      <h1 className='text-4xl font-bold'>Tailwind CSS is working!</h1>
-      <p className='text-lg mt-4'>Your Tailwind setup is complete.</p>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/links" element={<Links />} />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 
-export default App
+export default App;
